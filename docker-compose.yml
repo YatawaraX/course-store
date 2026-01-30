@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: course-frontend
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    container_name: course-backend
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
